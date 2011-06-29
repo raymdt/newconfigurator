@@ -1,0 +1,61 @@
+@namespace x "http://www.xml3d.org/2009/xml3d";	
+
+body {
+	font-family:'Arial', Times, serif; 
+	padding: 8px;
+  	margin: 0px;
+	}
+
+.description {
+   	display:block; 
+   	color:#333333; 
+   	font-size: 0.75em; 
+   	font-family:'Arial', Times, serif; 
+   	text-align:justify; 
+   	border: 1px solid #DDDDDD; 
+   	padding: 2px; 
+   	background-color:#EEEEEE; 
+   	margin-top:5px;
+}
+
+.content {
+	margin-left: 100px;
+}
+
+h1 {
+	font-family:'Arial', Times, serif; 
+   	border: 1px solid #DDDDDD; 
+   	padding-left: 10px; 
+   	background-color:#EEEEEE; 
+   	color:#777777;
+}
+
+x|float, x|float2, x|float3, x|int, x|bool, x|string {
+   display: none;
+}
+
+xml3d, .xml3d-canvas-style {
+	-moz-border-radius: 15px 15px 0px 0px;
+	border-radius: 15px 15px 0px 0px;
+	display: block;
+	cursor: default;
+}
+
+div.message{
+	border: 1px solid #666666;
+	padding: 4px;
+	margin: 0 0 4px 0;
+}
+
+div.actions{
+	clear: both;
+	border: 1px solid #888888;
+	background-color: #444444;
+	padding: 4px;
+	margin: 0 0 4px 0;
+}
+
+div.actions a{
+	padding-right: 8px;
+}
+

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="ImageViewer" default="all" basedir="D:\Dropbox\ich\workspace_sweng\Nous">
+	<description>
+
+	</description>
+
+	<property name="gwt.home" value="D:/entwicklung/eclipses/eclipse _GWT/plugins/com.google.gwt.eclipse.sdkbundle_2.3.0.r36v201104261928/gwt-2.3.0" />
+	<property name="gwt.module.id" value="charayt.DesktopApp" />
+	<property name="war.name" value="DesktopApp.war" />
+
+	
+	  <target name="copy3d" depends="" description="Copy the  xml3d directory">
+	    <mkdir dir="war/Car_XML3D" />
+	  	 <copy todir="war/Car_XML3D">
+	  		      <fileset dir="D:\Dropbox\ich\workspace_sweng\carconfigurator\Car_XML3D" includes="**/*"/>
+	   </copy>
+	  	</target>
+	
+	
+	<target name="jars"  depends="clean"  description="Package up the module project and required projects as jars">
+		<mkdir dir="war/WEB-INF/lib" />
+		
+		<!--=== Nous ===-->
+		<jar destfile='war/WEB-INF/lib/Nous.jar'>
+			<fileset dir="D:/Dropbox/ich/workspace_sweng/Nous/src">
+				<include name="**"/>
+			</fileset>
+			<fileset dir="D:/Dropbox/ich/workspace_sweng/Nous/test">
+				<include name="**"/>
+			</fileset>
+			<fileset dir="D:/Dropbox/ich/workspace_sweng/Nous/war/WEB-INF/classes">
+				<include name="**/*.class"/>
+			</fileset>
+			<fileset dir="D:/Dropbox/ich/workspace_sweng/Nous/war/WEB-INF/classes">
+				<include name="**/*.class"/>
+			</fileset>
+		</jar>
+		<copy todir='war/WEB-INF/lib'>
+			<fileset file="D:\entwicklung\eclipses\eclipse _GWT\plugins\com.google.gwt.eclipse.sdkbundle_2.3.0.r36v201104261928\gwt-2.3.0\gwt-dev.jar"/>
+			<fileset file="D:\entwicklung\eclipses\eclipse _GWT\plugins\com.google.gwt.eclipse.sdkbundle_2.3.0.r36v201104261928\gwt-2.3.0\validation-api-1.0.0.GA-sources.jar"/>
+			<fileset file="D:\entwicklung\eclipses\eclipse _GWT\plugins\com.google.gwt.eclipse.sdkbundle_2.3.0.r36v201104261928\gwt-2.3.0\validation-api-1.0.0.GA.jar"/>
+			<fileset file="D:\entwicklung\eclipses\eclipse _GWT\plugins\org.junit_4.8.1.v4_8_1_v20100427-1100\junit.jar"/>
+			<fileset file="D:\entwicklung\eclipses\eclipse _GWT\plugins\org.hamcrest.core_1.1.0.v20090501071000.jar"/>
+			<fileset file="D:\Dropbox\ich\workspace_sweng\Nous\gxt.jar"/>
+			<fileset file="D:\Dropbox\ich\workspace_sweng\Nous\war\WEB-INF\lib\mysql-connector-java-5.1.16-bin.jar"/>
+			<fileset file="D:\Dropbox\ich\workspace_sweng\Nous\war\WEB-INF\lib\gwt-servlet.jar"/>
+			<fileset file="D:\Dropbox\ich\workspace_sweng\Nous\war\WEB-INF\lib\gwt-dev.jar"/>
+			<fileset file="D:\Dropbox\ich\workspace_sweng\Nous\war\WEB-INF\lib\validation-api-1.0.0.GA-sources.jar"/>
+			<fileset file="D:\Dropbox\ich\workspace_sweng\Nous\war\WEB-INF\lib\validation-api-1.0.0.GA.jar"/>
+		</copy>		
+	</target>
+
+	<target name="gwt-compile" description="Compile to JavaScript">
+		<java classname="com.google.gwt.dev.Compiler" fork="yes" failonerror="true" maxmemory="1024m">
+			<classpath>
+				<pathelement location="D:/Dropbox/ich/workspace_sweng/Nous/src" />
+				<pathelement location="D:/Dropbox/ich/workspace_sweng/Nous/test" />
+				<pathelement location="D:/Dropbox/ich/workspace_sweng/Nous/war/WEB-INF/classes" />
+				<pathelement location="D:/entwicklung/eclipses/eclipse _GWT/plugins/com.google.gwt.eclipse.sdkbundle_2.3.0.r36v201104261928/gwt-2.3.0/gwt-user.jar" />
+				<pathelement location="D:/entwicklung/eclipses/eclipse _GWT/plugins/com.google.gwt.eclipse.sdkbundle_2.3.0.r36v201104261928/gwt-2.3.0/gwt-dev.jar" />
+				<pathelement location="D:/entwicklung/eclipses/eclipse _GWT/plugins/com.google.gwt.eclipse.sdkbundle_2.3.0.r36v201104261928/gwt-2.3.0/validation-api-1.0.0.GA-sources.jar" />
+				<pathelement location="D:/entwicklung/eclipses/eclipse _GWT/plugins/com.google.gwt.eclipse.sdkbundle_2.3.0.r36v201104261928/gwt-2.3.0/validation-api-1.0.0.GA.jar" />
+				<pathelement location="D:/entwicklung/eclipses/eclipse _GWT/plugins/org.junit_4.8.1.v4_8_1_v20100427-1100/junit.jar" />
+				<pathelement location="D:/entwicklung/eclipses/eclipse _GWT/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar" />
+				<pathelement location="D:/Dropbox/ich/workspace_sweng/Nous/gxt.jar" />
+				<pathelement location="D:/Dropbox/ich/workspace_sweng/Nous/war/WEB-INF/lib/mysql-connector-java-5.1.16-bin.jar" />
+				<pathelement location="D:/Dropbox/ich/workspace_sweng/Nous/war/WEB-INF/lib/gwt-servlet.jar" />
+				<pathelement location="D:/Dropbox/ich/workspace_sweng/Nous/war/WEB-INF/lib/gwt-dev.jar" />
+				<pathelement location="D:/Dropbox/ich/workspace_sweng/Nous/war/WEB-INF/lib/validation-api-1.0.0.GA-sources.jar" />
+				<pathelement location="D:/Dropbox/ich/workspace_sweng/Nous/war/WEB-INF/lib/validation-api-1.0.0.GA.jar" />
+				<pathelement location="D:/entwicklung/eclipses/eclipse _GWT/plugins/com.google.gwt.eclipse.sdkbundle_2.3.0.r36v201104261928/gwt-2.3.0/gwt-dev.jar" />
+			</classpath>
+			<arg value="-style"/>
+			<arg value="OBFUSCATED"/>
+			<arg value="${gwt.module.id}" />
+		</java>
+	</target>
+
+	<target name="war" depends="gwt-compile, jars">
+		<delete file="${war.name}" />
+		<jar destfile="${war.name}" basedir="war" duplicate="preserve" />
+	</target>
+	
+	<target name="deploy" depends="war">
+		<move file="${war.name}" todir="C:/tomcat/webapps" />
+	</target>
+
+	
+	
+		<target name="testserver">
+			<echo>START START START</echo>
+		<scp todir="student:$tuD3NtSS11@10.28.19.102:/home/student" trust="true">
+		<fileset dir="src"/>
+		</scp>
+			<echo>END END END</echo>
+		</target>
+		
+		<target name="deployextern" depends="war">
+			<echo>START START START</echo>
+		<scp file="${war.name}" todir="root@10.28.19.102:/var/lib/tomcat6/webapps"  password="root" trust ="true"/>
+
+			<echo>END END END</echo>
+		</target>
+		
+
+		<target name="all" depends=" deploy" />
+		
+
+		  <target name="clean" >
+		    <delete dir="C:/tomcat/Webapps/DesktopApp" />
+		  	<delete file="C:/tomcat/Webapps/DesktopApp.war" />
+		</target>
+
+</project>

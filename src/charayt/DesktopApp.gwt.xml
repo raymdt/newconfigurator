@@ -1,0 +1,8 @@
+<module>
+	<inherits name="com.google.gwt.user.User"/>
+	<inherits name="com.google.gwt.user.theme.standard.Standard"/>
+	<inherits name="com.extjs.gxt.ui.GXT"/>
+	<entry-point class="charayt.client.DesktopApp"/>
+	
+	<servlet path='/Service' class='charayt.server.ServiceImpl'/>
+</module>

@@ -1,0 +1,5 @@
+#Fri Jun 24 10:17:43 CEST 2011
+war.name=DesktopApp.war
+compiler.style=OBFUSCATED
+server.path=C\:\\tomcat\\webapps
+compiler.memory.max=1024m

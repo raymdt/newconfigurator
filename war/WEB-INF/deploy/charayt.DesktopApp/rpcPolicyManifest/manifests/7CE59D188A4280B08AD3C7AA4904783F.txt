@@ -1,0 +1,2 @@
+serviceClass: charayt.client.Service
+path: C110C25D239877DECE38548131053CB3.gwt.rpc

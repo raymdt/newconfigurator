@@ -1,0 +1,72 @@
+.icon-grid {
+  background: url( ExtGWT/desktop/images/grid.png ) !important;
+}
+
+.bogus {
+  background: url( ExtGWT/desktop/images/test.png ) !important;
+
+}
+
+.add {
+  background: url( ExtGWT/desktop/images/test.png ) !important;
+}
+
+.option {
+  background: url( ExtGWT/desktop/images/test.png ) !important;
+}
+
+.remove {
+  background: url( ExtGWT/desktop/images/test.png ) !important;
+}
+
+.save {
+  background: url( ExtGWT/desktop/images/test.png ) !important;
+}
+
+.accordion {
+  background: url( ExtGWT/desktop/images/test.png ) !important;
+}
+
+.tabs {
+  background: url( ExtGWT/desktop/images/test.png ) !important;
+}
+
+/* IM window icons */
+.user {
+  background: url( ExtGWT/desktop/images/test.png ) no-repeat !important;
+}
+
+.user-add {
+  background: url( ExtGWT/desktop/images/test.png ) !important;
+}
+
+.user-delete {
+  background: url( ExtGWT/desktop/images/test.png ) !important;
+}
+
+.connect {
+  background: url( ExtGWT/desktop/images/test.png ) !important;
+}
+
+.user-girl {
+  background: url( ExtGWT/desktop/images/test.png ) !important;
+}
+
+.user-kid {
+  background: url( ExtGWT/desktop/images/test.png ) !important;
+}
+
+.user-suit {
+  background: url( ExtGWT/desktop/images/test.png ) !important;
+}
+
+/* shortcuts */
+#grid-win-shortcut img {
+  width: 48px; height: 48px; 
+  background: url( ExtGWT/desktop/images/test.png ) !important;
+}
+
+#acc-win-shortcut img {
+  width: 48px; height: 48px;
+  background: url( ExtGWT/desktop/images/test.png ) !important;
+}
